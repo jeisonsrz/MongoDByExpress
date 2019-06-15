@@ -41,9 +41,10 @@ module.exports = {
             const entrada = req.body;
             const userDelete = await userModel.findOneAndDelete({_id: id}, entrada);
             res.send(userDelete);
+            console.log(req.body);
         } catch(error){
             res.status(500)
-            .send({msg:"El ususrio no se puede crear,oCURRIO UN ERROR EN EL SERVER"})
+            .send({msg:"El ususrio no se puede ELIMINAR,oCURRIO UN ERROR EN EL SERVER"})
 
         }
     },
